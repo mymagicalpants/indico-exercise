@@ -1,0 +1,10 @@
+@import-normalize;
+@import 'buttons.css';
+@import 'characters.css';
+
+.App {
+  margin: 50px;
+  width: 80%;
+  max-width: 1500px;
+  margin: 50px auto;
+}

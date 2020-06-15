@@ -1,0 +1,25 @@
+.button-container {
+    margin-bottom: 25px;
+}
+.button-container button {
+    margin-right: 10px;
+}
+.button-container button i {
+    margin-right: 5px;
+}
+.character .button-container {
+    margin-bottom:0;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+.character button {
+    color:#fff;
+}
+.button-container .decrease {
+    background-color:#f95359;
+}
+.button-container .increase {
+    background-color:#4caf50;
+    margin-right:0;
+}
