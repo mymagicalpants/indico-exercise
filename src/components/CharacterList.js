@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useContext } from 'react'
 import Character from './Character'
 import { CharacterContext } from './App'
 
@@ -15,14 +15,14 @@ export default function CharacterList({ characters }) {
                     type="button"
                     onClick={() => handleCharacterAdd()}
                 >
-                    <i class="fas fa-plus"></i>
+                    <i className="fas fa-plus"></i>
                     Add Character
                 </button>
                 <button  
                     type="button"
                     onClick={() => handleCharactersAttack()}
                 >
-                    <i class="fas fa-skull-crossbones"></i>
+                    <i className="fas fa-skull-crossbones"></i>
                     Attack All Characters
                 </button>
             </div>

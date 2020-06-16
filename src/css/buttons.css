@@ -16,10 +16,6 @@
 .character button {
     color:#fff;
 }
-.button-container .decrease {
-    background-color:#f95359;
-}
-.button-container .increase {
-    background-color:#4caf50;
+.character .button-container .green {
     margin-right:0;
 }

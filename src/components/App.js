@@ -8,6 +8,11 @@ export const CharacterContext = React.createContext()
 
 const LOCAL_STORAGE_KEY  = 'indico.exercise'
 
+function handleCharacterAvatarAdd() {
+  console.log('Images', Images)
+  return Images[Math.floor(Math.random() * 3)]
+}
+
 function App() {
   const [selectedCharacterId, setSelectedCharacterId] = useState()
   const [characters, setCharacters] = useState(sampleCharacters)  
@@ -36,18 +41,13 @@ function App() {
     const newCharacter = {
       id : uuidv4(),
       avatar : handleCharacterAvatarAdd(),
-      health : 25,
+      health : 0,
       attack : 0,
       defense : 0
     }
 
     setSelectedCharacterId(newCharacter.id)
     setCharacters([...characters, newCharacter])
-  }
-
-  function handleCharacterAvatarAdd() {
-    console.log('Images', Images)
-    return Images[Math.floor(Math.random() * 3)]
   }
 
   function handleCharactersAttack() {
@@ -89,8 +89,8 @@ function App() {
 const sampleCharacters = [
   {
     id : 1,
-    avatar : Images[Math.floor(Math.random() * 3)],
-    health : 25,
+    avatar : handleCharacterAvatarAdd(),
+    health : 0,
     attack : 0,
     defense : 0
   }

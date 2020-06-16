@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useContext } from 'react'
 import { CharacterContext } from './App'
 
 export default function Character(props) {
@@ -9,8 +9,7 @@ export default function Character(props) {
         attack, 
         defense
     } = props
-    const { 
-        handleCharacterChange,
+    const {
         handleCharacterPropertyDecrease,
         handleCharacterPropertyIncrease
     } = useContext(CharacterContext)
@@ -18,66 +17,66 @@ export default function Character(props) {
     return (
         <div className="character">
             <div className="character__avatar">
-                <img src={avatar.url} />
+                <img src={avatar.url} alt="" />
             </div>
             <div className="character__properties">
                 <div className="character__properties__property">
                     <div className="label">
                         Health
-                        <span class="amount">{health}</span>
+                        <span className="amount">{health}</span>
                     </div>
                     <div className="button-container">
                         <button 
-                            className="decrease"
+                            className="red"
                             onClick={() => handleCharacterPropertyDecrease(id, 'health')}
                         >
-                            <i class="fas fa-minus"></i>
+                            <i className="fas fa-minus"></i>
                         </button>
                         <button 
-                            className="increase"
+                            className="green"
                             onClick={() => handleCharacterPropertyIncrease(id, 'health')}
                         >
-                            <i class="fas fa-plus"></i>
+                            <i className="fas fa-plus"></i>
                         </button>
                     </div>
                 </div>
                 <div className="character__properties__property">
                     <div className="label">
                         Attack
-                        <span class="amount">{attack}</span>
+                        <span className="amount">{attack}</span>
                     </div>
                     <div className="button-container">
                         <button 
-                            className="decrease"
+                            className="red"
                             onClick={() => handleCharacterPropertyDecrease(id, 'attack')}
                         >
-                            <i class="fas fa-minus"></i>
+                            <i className="fas fa-minus"></i>
                         </button>
                         <button 
-                            className="increase"
+                            className="green"
                             onClick={() => handleCharacterPropertyIncrease(id, 'attack')}
                         >
-                            <i class="fas fa-plus"></i>
+                            <i className="fas fa-plus"></i>
                         </button>
                     </div>
                 </div>
                 <div className="character__properties__property">
                     <div className="label">
                         Defense
-                        <span class="amount">{defense}</span>
+                        <span className="amount">{defense}</span>
                     </div>
                     <div className="button-container">
                         <button 
-                            className="decrease"
+                            className="red"
                             onClick={() => handleCharacterPropertyDecrease(id, 'defense')}
                         >
-                            <i class="fas fa-minus"></i>
+                            <i className="fas fa-minus"></i>
                         </button>
                         <button 
-                            className="increase"
+                            className="green"
                             onClick={() => handleCharacterPropertyIncrease(id, 'defense')}
                         >
-                            <i class="fas fa-plus"></i>
+                            <i className="fas fa-plus"></i>
                         </button>
                     </div>
                 </div>
