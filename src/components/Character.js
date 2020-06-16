@@ -87,6 +87,7 @@ export default function Character(props) {
                     className=""
                     onClick={() => handleCharacterDelete(id)}
                 >
+                    <i class="fas fa-times"></i>
                     Remove Character
                 </button>
             </div>
