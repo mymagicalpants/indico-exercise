@@ -14,17 +14,13 @@ function handleCharacterAvatarAdd() {
 }
 
 function App() {
-  const [selectedCharacterId, setSelectedCharacterId] = useState()
-  const [characters, setCharacters] = useState(sampleCharacters)  
-  const selectedCharacter = characters.find(character => character.id === selectedCharacterId)
+  const [characters, setCharacters] = useState(sampleCharacters)
 
-  {/*pull from local storage first since these run in order*/}
   useEffect(() => {
     const charactersJSON = localStorage.getItem(LOCAL_STORAGE_KEY)
     if (charactersJSON != null) setCharacters(JSON.parse(charactersJSON))
   }, [])
 
-  {/*set local storage after we've already pulled when page loaded*/}
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(characters))
   }, [characters])
@@ -46,14 +42,13 @@ function App() {
       defense : 0
     }
 
-    setSelectedCharacterId(newCharacter.id)
     setCharacters([...characters, newCharacter])
   }
 
   function handleCharactersAttack() {
     const newCharacters = [...characters]
     newCharacters.map(character => {
-      character.health = 0
+      return character.health = 0
     })
     setCharacters(newCharacters)
   }
