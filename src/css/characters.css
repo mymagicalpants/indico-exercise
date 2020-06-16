@@ -37,7 +37,7 @@
     flex-grow:1;
 }
 .character__properties__property .amount {  
-    font-weight:300;
+    font-weight:bold;
     margin-left:10px;
 }
 .character .remove {
