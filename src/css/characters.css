@@ -40,6 +40,12 @@
     font-weight:300;
     margin-left:10px;
 }
+.character .remove {
+    text-align:center;
+}
+.character .remove button {
+    margin-right:0;
+}
 @media only screen and (max-width: 900px) {
     .character {
         flex: 0 0 45%;

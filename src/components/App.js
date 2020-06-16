@@ -30,7 +30,8 @@ function App() {
     handleCharactersAttack,
     handleCharacterChange,
     handleCharacterPropertyDecrease,
-    handleCharacterPropertyIncrease
+    handleCharacterPropertyIncrease,
+    handleCharacterDelete
   }
 
   function handleCharacterAdd() {
@@ -43,6 +44,11 @@ function App() {
     }
 
     setCharacters([...characters, newCharacter])
+  }
+
+  function handleCharacterDelete(charId) {
+    const newCharacters = [...characters].filter(c => c.id !== charId)
+    setCharacters(newCharacters)
   }
 
   function handleCharactersAttack() {

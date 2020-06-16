@@ -11,7 +11,8 @@ export default function Character(props) {
     } = props
     const {
         handleCharacterPropertyDecrease,
-        handleCharacterPropertyIncrease
+        handleCharacterPropertyIncrease,
+        handleCharacterDelete
     } = useContext(CharacterContext)
 
     return (
@@ -80,6 +81,14 @@ export default function Character(props) {
                         </button>
                     </div>
                 </div>
+            </div>
+            <div className="button-container remove">
+                <button 
+                    className=""
+                    onClick={() => handleCharacterDelete(id)}
+                >
+                    Remove Character
+                </button>
             </div>
         </div>
     )    

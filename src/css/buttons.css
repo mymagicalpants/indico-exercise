@@ -7,15 +7,15 @@
 .button-container button i {
     margin-right: 5px;
 }
-.character .button-container {
+.character__properties .button-container {
     margin-bottom:0;
     justify-content: flex-end;
     flex-wrap: nowrap;
     white-space: nowrap;
 }
-.character button {
+.character__properties .button-container button {
     color:#fff;
 }
-.character .button-container .green {
+.character__properties .button-container .green {
     margin-right:0;
 }
