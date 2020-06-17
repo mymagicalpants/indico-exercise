@@ -1,7 +1,6 @@
 .characterList {
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display:grid;
+    grid-template-columns: auto auto auto;
 }
 .character {
     border: 1px solid #4F5E74;
@@ -47,12 +46,12 @@
     margin-right:0;
 }
 @media only screen and (max-width: 900px) {
-    .character {
-        flex: 0 0 45%;
+    .characterList {
+        grid-template-columns: auto auto;
     }
 }
 @media only screen and (max-width: 580px) {
-    .character {
-        flex: 0 0 95%;
+    .characterList {
+        grid-template-columns: auto;
     }
 }
